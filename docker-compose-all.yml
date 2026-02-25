@@ -96,7 +96,7 @@ services:
       - 'FLUSH_PERIOD=1.5'
       - 'DELETE_PARENT_SHARD_RECORDS=false'
       - 'APP_LOG_LEVEL=warning'
-      - 'APP_LOG_FORMAT=json'
+      - 'APP_LOG_FORMAT=text'
       - 'SUBSTITUTE_LOCALHOST_IN_VARS=PROTOCOL_BROKER_URL'
     depends_on:
       - pg
@@ -123,7 +123,7 @@ services:
       - 'PROTOCOL_BROKER_QUEUE=swpt_debtors'
       - 'PROTOCOL_BROKER_QUEUE_ROUTING_KEY=#'
       - 'APP_LOG_LEVEL=warning'
-      - 'APP_LOG_FORMAT=json'
+      - 'APP_LOG_FORMAT=text'
       - 'SETUP_RABBITMQ_BINDINGS=yes'
       - 'SUBSTITUTE_LOCALHOST_IN_VARS=PROTOCOL_BROKER_URL'
     command: configure
@@ -191,7 +191,7 @@ services:
       - 'API_TIMEOUT_SECONDS=5'
       - 'APP_VERIFY_SSL_CERTIFICATES=False'
       - 'APP_LOG_LEVEL=info'
-      - 'APP_LOG_FORMAT=json'
+      - 'APP_LOG_FORMAT=text'
     depends_on:
       - pg
       - redis
@@ -300,7 +300,7 @@ services:
       - 'SWPT_SERVER_KEY=/secrets/swpt-server.key'
       - 'SWPT_NODEDATA_URL=file:///var/lib/swpt-nodedata'
       - 'APP_LOG_LEVEL=info'
-      - 'APP_LOG_FORMAT=json'
+      - 'APP_LOG_FORMAT=text'
       - 'SUBSTITUTE_LOCALHOST_IN_VARS=PROTOCOL_BROKER_URL'
     volumes:
       - './docker/nodedata/server.crt:/etc/swpt/server.crt'
@@ -326,7 +326,7 @@ services:
       - 'SWPT_SERVER_KEY=/secrets/swpt-server.key'
       - 'SWPT_NODEDATA_URL=file:///var/lib/swpt-nodedata'
       - 'APP_LOG_LEVEL=info'
-      - 'APP_LOG_FORMAT=json'
+      - 'APP_LOG_FORMAT=text'
       - 'SUBSTITUTE_LOCALHOST_IN_VARS=PROTOCOL_BROKER_URL'
     volumes:
       - './docker/nodedata/server.crt:/etc/swpt/server.crt'
@@ -349,7 +349,7 @@ services:
       - 'SWPT_SERVER_KEY=/secrets/swpt-server.key'
       - 'SWPT_NODEDATA_URL=file:///var/lib/swpt-nodedata'
       - 'APP_LOG_LEVEL=info'
-      - 'APP_LOG_FORMAT=json'
+      - 'APP_LOG_FORMAT=text'
       - 'SUBSTITUTE_LOCALHOST_IN_VARS=PROTOCOL_BROKER_URL'
     volumes:
       - './docker/nodedata/server.crt:/etc/swpt/server.crt'
